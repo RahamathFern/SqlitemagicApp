@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.siimkinks.sqlitemagic</groupId>
+  <artifactId>sqlitemagic-plugin</artifactId>
+  <version>0.23.1</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.auto.value</groupId>
+      <artifactId>auto-value</artifactId>
+      <version>1.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.javassist</groupId>
+      <artifactId>javassist</artifactId>
+      <version>3.22.0-GA</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>1.2.51</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-reflect</artifactId>
+      <version>1.2.51</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.zeroturnaround</groupId>
+      <artifactId>zt-zip</artifactId>
+      <version>1.9</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.siimkinks.sqlitemagic</groupId>
+      <artifactId>sqlitemagic-annotations</artifactId>
+      <version>0.23.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.siimkinks.sqlitemagic</groupId>
+      <artifactId>sqlitemagic-compiler-core</artifactId>
+      <version>0.23.1</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <name>SqliteMagic Gradle plugin</name>
+  <description>Compile-time-annotation-driven-no-reflection SQLite library for Android</description>
+  <url>https://github.com/siimkinks/sqlitemagic/</url>
+  <scm>
+    <url>https://github.com/siimkinks/sqlitemagic/</url>
+    <connection>scm:git@github.com/siimkinks/sqlitemagic.git</connection>
+    <developerConnection>scm:git@github.com:siimkinks/sqlitemagic.git</developerConnection>
+  </scm>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>siimkinks</id>
+      <name>Siim Kinks</name>
+    </developer>
+  </developers>
+</project>

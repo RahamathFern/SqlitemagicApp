@@ -1,0 +1,104 @@
+/*plugins {
+    id 'com.android.application'
+    id 'kotlin-kapt'
+}*/
+//apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'          // Kotlin plugin for Android
+//apply plugin: 'kotlin-kapt'             // Kotlin annotation processing
+
+
+
+plugins {
+    id 'com.android.application'
+//    id 'com.siimkinks.sqlitemagic'
+}
+
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "co.nexlabs.javaappsample"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+
+        /* buildConfigField "int", "DB_VERSION", "1"
+         buildConfigField "String", "DB_NAME", '"sq_lite_magic.db"'*/
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {
+        exclude group: 'androidx.databinding', module: 'databinding-compiler-common'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+}
+
+dependencies {
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+//    implementation fileTree(dir: 'D:\\AF-Migration\\siimkinks_0.23.1(clone)', include: ['*.aar', '*.jar'], exclude: [])
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'android.arch.persistence:db-framework:1.1.1'
+
+    //AutoValue
+    //  provided 'com.google.auto.value:auto-value:1.2'
+    implementation 'com.jakewharton.auto.value:auto-value-annotations:1.5'
+    implementation 'android.arch.lifecycle:livedata:1.1.1'
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    annotationProcessor 'com.google.auto.value:auto-value:1.6'
+    //  compile             "com.google.auto.value:auto-value-annotations:1.2"
+    //  annotationProcessor "com.google.auto.value:auto-value:1.2"
+    //AutoValue Gson
+    annotationProcessor 'com.ryanharter.auto.value:auto-value-gson:0.8.0'
+    compileOnly 'com.ryanharter.auto.value:auto-value-gson-annotations:0.8.0'
+
+    //implementation 'com.github.SiimKinks.sqlitemagic:gradle-plugin:0.23.0'
+    implementation 'com.github.SiimKinks.sqlitemagic:sqlitemagic:0.23.0'
+    annotationProcessor 'com.github.SiimKinks.sqlitemagic:sqlitemagic-compiler:0.23.0'
+
+   /* implementation (files('libs/sqlitemagic-plugin-0.23.1.jar'))
+    implementation (files('libs/sqlitemagic-0.23.1.jar'))
+    implementation (files('libs/sqlitemagic-annotations-0.23.1.jar'))
+*/
+    /*annotationProcessor (files('libs/sqlitemagic-compiler-magic-0.23.1.jar'))
+    annotationProcessor (files('libs/sqlitemagic-compiler-core-0.23.1.jar'))*/
+
+
+  /*  implementation 'com.siimkinks.sqlitemagic:sqlitemagic-plugin:0.23.1'
+//    https://artifactory.cronapp.io/libs-snapshot/com/siimkinks/sqlitemagic/sqlitemagic/0.23.1/*/
+
+//    implementation files('libs/sqlitemagic-plugin-0.23.1.jar')
+//    annotationProcessor files('libs/sqlitemagic-compiler-magic-0.23.1.jar')
+//    annotationProcessor files('libs/sqlitemagic-compiler-core-0.23.1.jar')
+}

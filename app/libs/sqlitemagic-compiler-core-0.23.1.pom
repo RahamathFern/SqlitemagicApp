@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.siimkinks.sqlitemagic</groupId>
+  <artifactId>sqlitemagic-compiler-core</artifactId>
+  <version>0.23.1</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.siimkinks.sqlitemagic</groupId>
+      <artifactId>sqlitemagic</artifactId>
+      <version>0.23.1</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.auto</groupId>
+      <artifactId>auto-common</artifactId>
+      <version>0.10</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.dagger</groupId>
+      <artifactId>dagger</artifactId>
+      <version>1.2.5</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>23.6-jre</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup</groupId>
+      <artifactId>javapoet</artifactId>
+      <version>1.10.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.6.2</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>1.2.51</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>android.arch.persistence</groupId>
+      <artifactId>db</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.reactivex.rxjava2</groupId>
+      <artifactId>rxjava</artifactId>
+      <version>2.1.16</version>
+      <scope>compile</scope>
+    </dependency>
+  </dependencies>
+  <name>SqliteMagic compiler core</name>
+  <description>Compile-time-annotation-driven-no-reflection SQLite library for Android</description>
+  <url>https://github.com/siimkinks/sqlitemagic/</url>
+  <scm>
+    <url>https://github.com/siimkinks/sqlitemagic/</url>
+    <connection>scm:git@github.com/siimkinks/sqlitemagic.git</connection>
+    <developerConnection>scm:git@github.com:siimkinks/sqlitemagic.git</developerConnection>
+  </scm>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>siimkinks</id>
+      <name>Siim Kinks</name>
+    </developer>
+  </developers>
+</project>
